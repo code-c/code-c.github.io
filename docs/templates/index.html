@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Don't touch this stuff unless you know what you're doing -->
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Codie Cottrell</title>
+
+		<!-- Bootstrap4 Javascript Files -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+		<!-- Bootstrap CSS Style Sheet -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    	<!-- D3 CSS files -->
+    	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+		<script src="https://d3js.org/d3.v3.min.js" type="text/javascript"></script>
+
+
+		<!-- Local-Sourced JS and CSS Files, note that django variables coming from api_routes.py -->
+		<script type='text/javascript'>{{ js_source }}</script>
+		<style>{{ css_source }} </style>
+
+	</head>
+	<!-- END of don't touch section -->
+
+	<body>
+
+		<!-- Navigation Bar -->
+		<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top" style="background-color: #ffffff">
+			<div class="container-fluid" style="background-color: #ffffff">
+				<a id='sphypermedia-navbar-logo' class="navbar-brand" href="#"><img src="{{ url_for('static',filename='sphypermedia_logo2.png') }}" alt="" class="hvr-grow"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive" style="background-color: #ffffff">
+					<ul class="navbar-nav ml-auto">
+						<li id='navbar-home-li' class="nav-item active">
+							<a href="#" id='navbar-home-button' class="nav-link hvr-grow">Home</a>
+						</li>
+						<li id='navbar-projects-li' class="nav-item">
+							<a href="#" id='navbar-projects-button' class="nav-link hvr-grow">Projects</a>
+						</li>
+						<li id='navbar-about-me-li' class="nav-item">
+							<a href="#" id='navbar-about-me-button' class="nav-link hvr-grow">About Me</a>
+						</li>
+						<li id='navbar-connect-li' class="nav-item">
+							<a href="#" id='navbar-connect-button'class="nav-link hvr-grow">Connect</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- END Navigation bar -->
+
+		<!--- Image Carousel Slider -->
+		<div id="slides" class="carousel slide" data-ride="carousel" style='background-color:black'>
+			<!-- Line indicators under slides to show which slide you're on. Comment-out to disable user selection  -->
+			<ul class="carousel-indicators">
+				<li data-target="#slides" data-slide-to="0" id='carousel-slide1' class="active"></li>
+				<li data-target="#slides" data-slide-to="1" id='carousel-slide2' ></li>
+				<li data-target="#slides" data-slide-to="2" id='carousel-slide3' ></li>
+			</ul>
+			<div class="carousel-inner">
+
+				<!-- First Image in Carousel -->
+				<div id='slide1' class="carousel-item active">
+					<img src="{{ url_for('static',filename='space.png') }}" style='position:fixed;'>
+					<div class="carousel-caption">
+						<h1 class="display-2">Mountain Waves</h1>
+						<h4>Mountain Waves</h4>
+						<button id='carousel-learn-more-button' type="button" class="btn btn-outline-light btn-lg hvr-grow">Learn More</button>
+					</div>
+				</div>
+
+				<!-- Second Image -->
+				<div id='slide2' class="carousel-item">
+					<img src="{{ url_for('static',filename='hypersphere_gif.gif') }}" alt="" style='padding-right:4%;'>
+					<div class="carousel-caption">
+						<h1 class="display-2">"Kings Quest"</h1>
+						<h4>A txt based game</h4>
+						<button id='carousel-learn-more-button' type="button" class="btn btn-outline-light btn-lg hvr-grow">Learn More</button>
+					</div>
+				</div>
+
+				<!-- Third Image -->
+				<div id='slide3' class="carousel-item">
+					<img src="{{ url_for('static',filename='uvm.png') }}" alt="">
+					<div class="carousel-caption">
+						<h1 class="display-2">The Maine Camp</h1>
+						<h4>a BIG Project</h4>
+						<button id='carousel-learn-more-button' type="button" class="btn btn-outline-light btn-lg hvr-grow">Learn More</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END Image Carousel Slider -->
+
+	<!--- Fixed background -->
+<!-- 	<div id='fixed-background-image'>
+		<figure>
+			<div>
+				<div class="fixed-wrap">
+
+					<div id="fixed" style='background-image: url("{{ url_for('static',filename='space.png') }}");'>
+
+						<div class="carousel-caption">
+							<h1 class="display-2">Sphypermedia</h1>
+							<h3>CS 205 Final Project</h3>
+							<button type="button" class="btn btn-outline-light btn-lg">Play a Game</button>
+							<button id='carousel-team-button' type="button" class="btn btn-primary btn-lg">See the Team</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</figure>
+	</div> -->
+
+
+		<div id='about-me-section'>
+
+			<!--- Welcome Section -->
+			<div class="container-fluid padding">
+				<div class="row welcome text-center">
+					<hr>
+					<div class="col-12">
+						<h3 style="color:#6648b1;">Codie Cottrell</h3>
+					</div>
+				</div>
+				<hr class="my-4">
+			</div>
+
+
+			<!--- Two Column Section -->
+			<div class="container-fluid padding">
+					<div class="row padding">
+						<div class="col-lg-6">
+							<h2>About Me</h2>
+              <p>I am a hard worker dedicated to... etc </p>
+						</div>
+
+						<div class="col-lg-6">
+							<img src="{{ url_for('static',filename='codie.jpg') }}">
+						</div>
+					</div>
+			</div>
+		</div>
+
+		<!--- Meet the team -->
+		<div id='projects-div'>
+					<div class="col-12">
+						<h2 class="display text-center" style="color:#6648b1;">Projects</h2>
+					</div>
+
+			<!--- Profile Cards -->
+			<div class="container-fluid padding">
+				<div class="row padding">
+
+					<div class="col-md-3">
+						<div class="card">
+							<a href="#" onclick="prepareNickPage()"><img class="card-img-top" src="{{ url_for('static',filename='nick.png') }}"></a>
+							<div class="card-body">
+								<h4 class="card-title">Mountain Wave Productions</h4>
+								<p class="card-text">a smarter film company</p>
+								<a id='see-mountainwavepr' class="btn btn-outline-secondary hvr-grow">See Project</a>
+							</div>
+						</div>
+					</div>
+					<!-- this is where to put new projects -->
+
+				</div>
+				<hr class="my-4">
+			</div>
+		</div>
+		<!-- END meet the team section -->
+
+
+		<!-- Profile Div -->
+		<div id='profile'></div>
+		<!-- END Profile Div -->
+
+		<!-- Footer Section -->
+		<div id='footer-section'>
+			<div class="container-fluid padding">
+				<div class="row text-center padding">
+					<div class="col-12">
+						<h2 style="color:#6648b1;">Connect With Me:</h2>
+					</div>
+				</div>
+				<!--- Footer -->
+				<footer>
+					<div class="container-fluid padding">
+						<div class="row text-center">
+							<div class="col-md-3">
+								<hr class="light">
+								<h5>Developer</h5>
+								<hr class="light">
+								<a href="#" onclick="prepareNickPage()"><p>Codie Cottrell</p></a>
+							</div>
+							<div class="col-md-3">
+								<hr class="light">
+								<h5>Email</h5>
+								<hr class="light">
+								<a href="mailto:codiecottrell@gmail.com"><p>codiecottrell@gmail.com</p></a>
+							</div>
+							<div class="col-md-3">
+								<hr class="light">
+								<h5>Mobile</h5>
+								<hr class="light">
+								<p>973 234 3612</p>
+							</div>
+							<div class="col-md-3">
+								<hr class="light">
+								<h5>Location</h5>
+								<hr class="light">
+								<p>Offgrid, Maine</p>
+							</div>
+							<div class="col-12">
+								<hr class="light-100">
+								<h5>&copy; mountainwavepr.com</h5>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<!-- END Footer Section -->
+	</body>
+</html>
