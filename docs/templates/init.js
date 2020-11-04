@@ -25,7 +25,7 @@ function prepare_page_load() {
 	// Setting up the button listeners
 
 		// MntWv Navbar Logo Listener
-		$('#sphypermedia-navbar-logo').click(function() {
+		$('#name-logo').click(function() {
 			//window.scrollTo(0, 100); // xcoordinate,ycoordinate
 			$('#navbar-home-li').addClass('active');
       $('#navbar-projects-li').removeClass('active');
@@ -78,7 +78,7 @@ function prepare_page_load() {
       $('#navbar-projects-li').removeClass('active');
 			$('#navbar-about-me-li').removeClass('active');
 			$('#navbar-connect-li').removeClass('active')
-			show_about();
+			show_projects();
 		});
 
 
@@ -113,16 +113,16 @@ function show_projects(){
 
 function show_connect(){
 	hide_all();
+  $('#connect-section').fadeIn('slow');
 	$('#footer-section').fadeIn('slow');
 }
 
 // If you add a div to index.html, add it to the list..
 // NOTE: Excludes navbar and footer section
 function hide_all() {
-	//window.scrollTo(0, 0); // scroll to top of the page -- xcoordinate,ycoordinate
 	$('#slides').hide();
 	$('#about-me-section').hide();
 	$('#projects-div').hide();
-	$('#profile').hide();
+	$('#connect-section').hide();
 	$('#footer-section').hide();
 }

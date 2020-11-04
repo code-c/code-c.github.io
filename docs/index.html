@@ -23,8 +23,8 @@
 	<body>
 
 <!-- Navigation Bar -->
-		<nav id="navbar" class="navbar sticky-top navbar-expand-md navbar-dark">
-          <a class="navbar-brand" href="#">Codie Cottrell</a>
+		<nav id="navbar" class="navbar fixed-top navbar-expand-md navbar-dark" style="opacity:10px">
+          <a id='name-logo' class="navbar-brand hvr-grow" href="#home">Codie Cottrell</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
@@ -47,7 +47,7 @@
         </nav>
 
 			<!--- Image Carousel Slider -->
-			<div id="slides" class="carousel slide" data-ride="carousel" style='background-color:black'>
+			<div id="slides" class="carousel slide" data-ride="carousel">
 				<!-- Line indicators under slides to show which slide you're on. Comment-out to disable user selection  -->
 				<ul class="carousel-indicators">
 					<li data-target="#slides" data-slide-to="0" id='carousel-slide1' class="active"></li>
@@ -60,8 +60,8 @@
 					<div id='slide1' class="carousel-item active">
 						<img src="static/barHarbor.jpg" style='position:fixed;' alt="">
 						<div class="carousel-caption">
-							<h1 class="display-2">Mountain Waves</h1>
-							<h4>Mountain Waves</h4>
+							<img src="static/logoBlack.png" alt="">
+							<h4>My Film and Photography brand</h4>
 							<button id='carousel-learn-more-button' type="button" class="btn btn-outline-light btn-lg hvr-grow">Learn More</button>
 						</div>
 					</div>
@@ -70,7 +70,7 @@
 					<div id='slide2' class="carousel-item">
 						<img src="static/mushroom.jpg" style='position:fixed;' alt="">
 						<div class="carousel-caption">
-							<h1 class="display-2">"Kings Quest"</h1>
+							<h1 class="display-2">Fern Quest</h1>
 							<h4>A txt based game</h4>
 							<button id='carousel-learn-more-button' type="button" class="btn btn-outline-light btn-lg hvr-grow">Learn More</button>
 						</div>
@@ -94,18 +94,6 @@
 
 		<div id='about-me-section'>
 
-			<!--- Welcome Section -->
-			<div class="container-fluid padding">
-				<div class="row welcome text-center">
-					<hr>
-					<div class="col-12">
-						<h3 style="color:#bdc3c7;">Codie Cottrell</h3>
-					</div>
-				</div>
-				<hr class="my-4">
-			</div>
-
-
 			<!--- Two Column Section -->
 			<div class="container-fluid padding">
 					<div class="row padding">
@@ -121,13 +109,14 @@
 			</div>
 		</div>
 
-		<!--- Meet the team -->
+
+		<!--- Projects -->
 		<div id='projects-div'>
 					<div class="col-12">
 						<h2 class="display text-center" style="color:#bdc3c7;">Projects</h2>
 					</div>
 
-			<!--- Profile Cards -->
+			<!--- project Cards -->
 			<div class="container-fluid padding">
 				<div class="row padding">
 
@@ -150,18 +139,27 @@
 		<!-- END meet the team section -->
 
 
-		<!-- Profile Div -->
-		<div id='profile'></div>
+		<!-- Connect Div -->
+		<div id='connect-section' style ="background: url(static/purpleRiver.jpg) center center fixed;
+		background-size: cover;
+
+		text-align: center;
+		vertical-align: middle;">
+			<div id='banner-text' class="connect">
+          <div class="intro-text container">
+					<h1 class="display text-center intro-text" style="color:#bdc3c7;">Connect With Me</h1>
+					<h3>Maybe you like my photography, or you really dig this neat color scheme, or youre a hiring manager and like my work!
+					I want to hear from you! shoot me an email or fill out the form below.</h3>
+				</div>
+			</div>
+		</div>
+
 		<!-- END Profile Div -->
 
 		<!-- Footer Section -->
 		<div id='footer-section'>
 			<div class="container-fluid padding">
-				<div class="row text-center padding">
-					<div class="col-12">
-						<h4 style="color:#bdc3c7;">Connect With Me:</h4>
-					</div>
-				</div>
+
 				<!--- Footer -->
 				<footer>
 					<div class="container-fluid padding">
