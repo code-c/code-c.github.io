@@ -23,7 +23,7 @@
 	<body>
 
 <!-- Navigation Bar -->
-		<nav id="navbar" class="navbar fixed-top navbar-expand-md navbar-dark" style="opacity:10px">
+		<nav id="navbar" class="navbar fixed-top navbar-expand-md navbar-dark">
           <a id='name-logo' class="navbar-brand hvr-grow" href="#home">Codie Cottrell</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
@@ -140,9 +140,8 @@
 
 
 		<!-- Connect Div -->
-		<div id='connect-section' style ="background: url(static/purpleRiver.jpg) center center fixed;
+		<div id='connect-section' style ="background: url(static/reflect.jpg) center center fixed;
 		background-size: cover;
-
 		text-align: center;
 		vertical-align: middle;">
 			<div id='banner-text' class="connect">
@@ -151,6 +150,59 @@
 					<h3>Maybe you like my photography, or you really dig this neat color scheme, or youre a hiring manager and like my work!
 					I want to hear from you! shoot me an email or fill out the form below.</h3>
 				</div>
+			</div>
+
+			<!-- Form section -->
+			<div id='connect-form' class="connect-form">
+				<form>
+				  <div class="row">
+				    <div class="col">
+							<div class="form-group">
+								<label for="form-name">First name *</label>
+					      <input type="text" id='form-name' name='name' class="form-control" placeholder="Please enter your first name" required="required" data-error="Firstname is required">
+	              <div class="help-block with-errors"></div>
+						</div>
+				    </div>
+				    <div class="col">
+							<div class="form-group">
+								<label for="form-name">Last name</label>
+				      	<input type="text" class="form-control" placeholder="last name">
+				    	</div>
+						</div>
+				  </div>
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<label for="form-name">Email Address * </label>
+								<input type="text" id='form-email' name='email' class"form-control" placeholder="email*" required="required" data-error="email is required">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<label for="form_subject">Subject *</label>
+								<input id="form_subject" type="text" name="subject" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid subject is required.">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="form_message">Message *</label>
+								<textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<input type="submit" class="btn btn-success btn-send" value="Send message">
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 

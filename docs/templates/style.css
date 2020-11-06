@@ -11,9 +11,9 @@ html, body {
 
 /*  ---------------- NAVBAR FORMATTING -------------------- */
 .navbar {
-  padding: .8rem;
-  background-color: transparent; 
-  opacity 0.5;
+  padding:.8rem;
+  background-color: #323133;
+  opacity: 0.3;
 }
 .navbar-nav li {
   padding-right: 5px;
@@ -77,6 +77,15 @@ html, body {
 .intro-text {
     padding-top: 75px;
     padding-bottom: 200px;
+}
+
+.connect-form {
+  background-color: #3C3B3D;
+  color: #AC92EC;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /*  ---------------- End Connect section -------------------- */
