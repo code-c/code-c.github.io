@@ -14,8 +14,8 @@ $email_subject = "Web Form - $subject";
 
 $email_body = "from: $name\n".
               "Their message:\n $message".
-              "web page rating: $webpageRating"
-              "Photo rating: $photoRating"
+              "web page rating: $webpageRating".
+              "Photo rating: $photoRating".
 
 $to = "codiecottrell@gmail.com";
 
