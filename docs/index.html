@@ -71,7 +71,7 @@
 						<img src="static/mushroom.jpg" style='position:fixed;' alt="">
 						<div class="carousel-caption">
 							<h1 class="display-2">Fern Quest</h1>
-							<h4>A txt based game</h4>
+							<h4>A txt based game Im developing!</h4>
 							<button id='carousel-learn-more-button' type="button" class="btn btn-outline-light btn-lg hvr-grow">Learn More</button>
 						</div>
 					</div>
@@ -96,14 +96,20 @@
 
 			<!--- Two Column Section -->
 			<div class="container-fluid padding">
-					<div class="row padding">
+					<div class="row padding headings">
 						<div class="col-lg-6">
 							<h2>About Me</h2>
-              <p>I am a hard worker dedicated to... etc </p>
+              <p>Recent Grad from UVM with a Masters in Computer Science, <br>
+								I am a self motivated software engineer devoted to delivering quality code <br>
+								I am always building my knowledge and currently I am looking for a Junior Software Engineering position</p>
+							<div class=" col-lg-12 sub-section">
+              To know more about me,<br>
+              <a href="static/resume.pdf" target="_blank" class="btn btn-warning">View Resume</a>
+            	</div>
 						</div>
 
 						<div class="col-lg-6">
-							<img src="static/codie.jpg">
+							<img class="personal-photo" src="static/codie.jpg">
 						</div>
 					</div>
 			</div>
@@ -113,7 +119,7 @@
 		<!--- Projects -->
 		<div id='projects-div'>
 					<div class="col-12">
-						<h2 class="display text-center" style="color:#bdc3c7;">Projects</h2>
+						<h2 class="display text-center headings" style="color:#bdc3c7;">Projects</h2>
 					</div>
 
 			<!--- project Cards -->
@@ -140,50 +146,47 @@
 
 
 		<!-- Connect Div -->
-		<div id='connect-section' style ="background: url(static/reflect.jpg) center center fixed;
+		<div id='connect-section' style ="background: url(static/reflectCrop.jpg) center center fixed;
 		background-size: cover;
 		text-align: center;
 		vertical-align: middle;">
 			<div id='banner-text' class="connect">
           <div class="intro-text container">
-					<h1 class="display text-center intro-text" style="color:#bdc3c7;">Connect With Me</h1>
-					<h3>Maybe you like my photography, or you really dig this neat color scheme, or youre a hiring manager and like my work!
-					I want to hear from you! shoot me an email or fill out the form below.</h3>
+					<h1>Maybe you like my photography, <br> or you really dig this neat color scheme,</br> or youre a hiring manager and like my work!</h1>
 				</div>
 			</div>
 
 			<!-- Form section -->
 			<div id='connect-form' class="connect-form">
-				<form>
+				<h1 class="display text-center form-title">Contact Me:</h1>
+				<form method="POST" action="templates/mail.php" enctype="text/plain">
 				  <div class="row">
-				    <div class="col">
+				    <div class="col-md-6">
 							<div class="form-group">
 								<label for="form-name">First name *</label>
 					      <input type="text" id='form-name' name='name' class="form-control" placeholder="Please enter your first name" required="required" data-error="Firstname is required">
 	              <div class="help-block with-errors"></div>
 						</div>
 				    </div>
-				    <div class="col">
+				    <div class="col-md-6">
 							<div class="form-group">
-								<label for="form-name">Last name</label>
+								<label for="form-lastname">Last name</label>
 				      	<input type="text" class="form-control" placeholder="last name">
 				    	</div>
 						</div>
 				  </div>
 					<div class="row">
-						<div class="col">
-							<div class="form-group">
-								<label for="form-name">Email Address * </label>
-								<input type="text" id='form-email' name='email' class"form-control" placeholder="email*" required="required" data-error="email is required">
-								<div class="help-block with-errors"></div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="form_email">Email *</label>
+                <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+						<div class="col-md-6">
 							<div class="form-group">
 								<label for="form_subject">Subject *</label>
-								<input id="form_subject" type="text" name="subject" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid subject is required.">
+								<input id="form_subject" type="text" name="subject" class="form-control" placeholder="subject *" required="required" data-error="Valid subject is required.">
 								<div class="help-block with-errors"></div>
 							</div>
 						</div>
@@ -199,6 +202,61 @@
 					</div>
 					<div class="row">
 						<div class="col-md-12">
+							<h4>I would appreciate it if you filled out the little survey below as well, It lets me know how im doing!<h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<h5> how does the webpage look on a scale from 1-5? <h5>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="webpageScale" id="inlineRadio1" value="meh">
+							  <label class="form-check-label" for="inlineRadio1">meh</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="webpageScale" id="inlineRadio2" value="itsOkay">
+							  <label class="form-check-label" for="inlineRadio2">its okay...</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="webpageScale" id="inlineRadio3" value="average">
+							  <label class="form-check-label" for="inlineRadio3">average</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="webpageScale" id="inlineRadio4" value="itsCool">
+							  <label class="form-check-label" for="inlineRadio3">its cool</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="webpageScale" id="inlineRadio5" value="looksGreat">
+							  <label class="form-check-label" for="inlineRadio3">looks great!</label>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<h5> Hows my photography? <h5>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="photoScale" id="inlineRadio1" value="meh">
+							  <label class="form-check-label" for="inlineRadio1">meh</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="photoScale" id="inlineRadio2" value="itsOkay">
+							  <label class="form-check-label" for="inlineRadio2">its okay...</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="photoScale" id="inlineRadio3" value="average">
+							  <label class="form-check-label" for="inlineRadio3">average</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="photoScale" id="inlineRadio4" value="itsCool">
+							  <label class="form-check-label" for="inlineRadio3">its cool</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="photoScale" id="inlineRadio5" value="photoScale">
+							  <label class="form-check-label" for="inlineRadio3">looks great!</label>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
 							<input type="submit" class="btn btn-success btn-send" value="Send message">
 						</div>
 					</div>
@@ -206,7 +264,6 @@
 			</div>
 		</div>
 
-		<!-- END Profile Div -->
 
 		<!-- Footer Section -->
 		<div id='footer-section'>

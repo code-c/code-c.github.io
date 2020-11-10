@@ -9,11 +9,18 @@ html, body {
   background-color: #323133;
 }
 
+.headings {
+  padding-top: 50px;
+}
+
 /*  ---------------- NAVBAR FORMATTING -------------------- */
 .navbar {
   padding:.8rem;
   background-color: #323133;
-  opacity: 0.3;
+  opacity: 0.5;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(10000px) saturate(225%);
+  z-index: 2;
 }
 .navbar-nav li {
   padding-right: 5px;
@@ -24,7 +31,6 @@ html, body {
   background-color: transparent;
 }
 
-
 /*  ---------------- Carousel FORMATTING -------------------- */
 
 .carousel-inner img {
@@ -32,15 +38,16 @@ html, body {
   height: 100%;
 }
 .carousel-caption {
+  font-family: Playfair;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-40%);
 }
 
 .carousel-caption img {
   width: 450px;
   height: auto;
-  transform: translateY(-30%);
+  transform: translateY(-20%);
 }
 
 .carousel-caption h1 {
@@ -62,33 +69,58 @@ html, body {
   background-color: #7f8c8d;
   border: 1px solid #7f8c8d;
 }
+/*  ---------------- Projects FORMATTING -------------------- */
+
+.card {
+  background-color: #6A50A7;
+}
 
 
-/*  ---------------- Connect section -------------------- */
+/*  ---------------- About Me FORMATTING -------------------- */
+
+
+.personal-photo {
+  padding-top: 50px;
+  width: 300px;
+  height: auto;
+}
+
+
+/*  ---------------- Connect FORMATTING -------------------- */
 
 .connect {
     background: url('static/purpleRiver.jpg') center center fixed;
     background-size: cover;
-
+    color: #bdc3c7;
     text-align: center;
     vertical-align: middle;
 }
 
 .intro-text {
-    padding-top: 75px;
-    padding-bottom: 200px;
+  padding-top: 400px;
+  padding-bottom: 300px;
+  padding-left: 40px;
+  text-shadow: 4px 4px 6px #7F8C8D;
+  font-weight: bold;
+}
+
+.form-title {
+  color:#bdc3c7;
+  text-shadow: 2px 2px 7px #967ADC;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .connect-form {
   background-color: #3C3B3D;
   color: #AC92EC;
-  padding-top: 50px;
+  padding-top: 5px;
   padding-bottom: 50px;
   padding-left: 50px;
   padding-right: 50px;
 }
 
-/*  ---------------- End Connect section -------------------- */
+/*  ---------------- Footer FORMATTING -------------------- */
 
 footer {
   background-color: #323133;
