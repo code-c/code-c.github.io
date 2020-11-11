@@ -10,13 +10,13 @@ html, body {
 }
 
 .headings {
-  padding-top: 50px;
+  padding-top: 70px;
 }
 
 /*  ---------------- NAVBAR FORMATTING -------------------- */
 .navbar {
   padding:.8rem;
-  background-color: #323133;
+  background-color: rgba(32,33,36,0.96);
   opacity: 0.5;
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(10000px) saturate(225%);
@@ -72,16 +72,21 @@ html, body {
 /*  ---------------- Projects FORMATTING -------------------- */
 
 .card {
-  background-color: #6A50A7;
+  background-color: #434A53;
+
 }
 
 
 /*  ---------------- About Me FORMATTING -------------------- */
 
+.about {
+  text-align: center;
+  vertical-align: center;
+}
 
 .personal-photo {
-  padding-top: 50px;
-  width: 300px;
+  border-radius: 50%;
+  width: 200px;
   height: auto;
 }
 
@@ -106,14 +111,13 @@ html, body {
 
 .form-title {
   color:#bdc3c7;
-  text-shadow: 2px 2px 7px #967ADC;
   padding-top: 10px;
   padding-bottom: 20px;
 }
 
 .connect-form {
   background-color: #3C3B3D;
-  color: #AC92EC;
+  color: #4FC1E9;
   padding-top: 5px;
   padding-bottom: 50px;
   padding-left: 50px;
