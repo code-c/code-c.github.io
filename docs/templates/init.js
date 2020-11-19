@@ -27,11 +27,11 @@ function prepare_page_load() {
 		// MntWv Navbar Logo Listener
 		$('#name-logo').click(function() {
 			//window.scrollTo(0, 100); // xcoordinate,ycoordinate
-			$('#navbar-home-li').addClass('active');
+			$('#navbar-home-li').removeClass('active');
       $('#navbar-projects-li').removeClass('active');
-			$('#navbar-about-me-li').removeClass('active');
+			$('#navbar-about-me-li').addClass('active');
 			$('#navbar-connect-li').removeClass('active');
-			show_home();
+			show_about();
 		});
 
 		// Home navbar button listener
@@ -56,8 +56,8 @@ function prepare_page_load() {
 		// Team navbar button listener
 		$('#navbar-projects-button').click(function() {
 			$('#navbar-home-li').removeClass('active');
-      $('#navbar-projects-li').removeClass('active');
-			$('#navbar-about-li').removeClass('active');
+      $('#navbar-projects-li').addClass('active');
+			$('#navbar-about-me-li').removeClass('active');
 			$('#navbar-connect-li').removeClass('active');
 			show_projects();
 		});
@@ -72,14 +72,24 @@ function prepare_page_load() {
 		});
 
 
-		// Learn More carousel button listener
+		// Learn More carousel button listeners
 		$('#carousel-learn-more-button').click(function() {
 			$('#navbar-home-li').removeClass('active');
-      $('#navbar-projects-li').removeClass('active');
-			$('#navbar-about-me-li').removeClass('active');
-			$('#navbar-connect-li').removeClass('active')
+      $('#navbar-projects-li').addClass('active');
 			show_projects();
 		});
+
+    $('#carousel-learn-more-button2').click(function() {
+      $('#navbar-home-li').removeClass('active');
+      $('#navbar-projects-li').addClass('active');
+      show_projects();
+    });
+
+    $('#carousel-learn-more-button3').click(function() {
+      $('#navbar-home-li').removeClass('active');
+      $('#navbar-projects-li').addClass('active');
+      show_projects();
+    });
 
 
 }
