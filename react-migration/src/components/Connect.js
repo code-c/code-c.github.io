@@ -9,74 +9,82 @@ class Connect extends React.Component {
         this.state = {
             firstName: '',
             lastName: '',
-            // email: '',
-            // subject: '',
-            // message: '',
-            // webScale: '',
-            // photoScale: ''
+            email: '',
+            subject: '',
+            message: '',
+            webScale: '',
+            photoScale: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
     
       handleChange(event) {    
-          this.setState({value: event.target.value});  
+            this.setState({
+                firstName: event.target.firstName,
+                lastName: event.target.lastName,
+                email: event.target.email,
+                subject: event.target.subject,
+                message: event.target.message,
+                webScale: event.target.webScale,
+                photoScale: event.target.photoScale
+            });  
         }
 
       handleSubmit(event) {
-        //alert('A name was submitted: ' + this.state.value);
-        //event.preventDefault();
+        alert('A name was submitted: ' + this.state.value);
+        event.preventDefault();
       }
     
 
-    render() {
+    render (){
         return (
             <div id='connect-section'>
                 <div id='banner-text' class="connect">
                     <div class="intro-text container">
                         <h1>
-                        Maybe you like my photography, <br>
-                        or you really dig this neat color scheme,</br>
+                        Maybe you like my photography, <br></br>
+                        or you really dig this neat color scheme,<br></br>
                             or youre a hiring manager and like my work!
                         </h1>
                     </div>
                 </div>
 
-                {/* <!-- Form section --> 
+                {/* <!-- Form section --> */}
                 <div id='connect-form' class="connect-form">
                     <h1 class="display text-center form-title">Contact Me:</h1>
-                    <form onSubmit={this.handleSubmit} method="POST">
+                    <form onSubmit={this.handleSubmit} >
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <!-- first name --> 
+                                    {/* <!-- first name --> */}
                                     <label for="form-name">First name *</label>
-                                    <input type="text" id='form-name' name='name' class="form-control" placeholder="Please enter your first name" required data-error="Firstname is required"></input>
+                                    <input type="text" id='form-name' firstName={this.state.firstName} onChange={this.handleChange} class="form-control" placeholder="Please enter your first name" required data-error="Firstname is required"></input>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    {/* <!-- last name -->
+                                    {/* <!-- last name --> */}
                                     <label for="form-lastname">Last name *</label>
-                                    <input type="text" id='form-lastname' name='lastname' class="form-control" placeholder="last name" required data-error="Firstname is required"></input>
+                                    <input type="text" id='form-lastname' lastName={this.state.lastName} onChange={this.handleChange} class="form-control" placeholder="last name" required data-error="Firstname is required"></input>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    {/* <!-- email --> 
+                                    {/* <!-- email --> */}
                                     <label for="form_email">Email *</label>
-                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required data-error="Valid email is required."></input>
+                                    <input id="form_email" type="email" email={this.state.email} onChange={this.handleChange} class="form-control" placeholder="Please enter your email *" required data-error="Valid email is required."></input>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    {/* <!-- subject of the message -->
+                                    {/* <!-- subject of the message --> */}
                                     <label for="form_subject">Subject *</label>
-                                    <input id="form_subject" type="text" name="subject" class="form-control" placeholder="subject *" required data-error="Valid subject is required."></input>
+                                    <input id="form_subject" type="text" subject={this.state.subject} onChange={this.handleChange} class="form-control" placeholder="subject *" required data-error="Valid subject is required."></input>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
@@ -84,15 +92,15 @@ class Connect extends React.Component {
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    {/* <!-- message --> 
+                                    {/* <!-- message --> */}
                                     <label for="form_message">Message *</label>
-                                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required data-error="Please, leave us a message."></textarea>
+                                    <textarea id="form_message" message={this.state.message} onChange={this.handleChange} class="form-control" placeholder="Message for me *" rows="4" required data-error="Please, leave us a message."></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* <!-- quick note --> 
+                        {/* <!-- quick note --> */}
                         <div class="row">
                             <div class="col-md-12">
                                 <h4>I would appreciate it if you filled out the little survey below as well, It lets me know how im doing!</h4>
@@ -100,7 +108,9 @@ class Connect extends React.Component {
                         </div>
 
                         {/* <!-- Survey Section of the form -->
-                        <!-- webpage scale --> 
+
+                        in this section we want to write sliders for the scale and its from 0-100 or um no.. - lookin pro
+                        <!-- webpage scale --> */}
                         <div class="row">
                             <div class="col-md-12">
                                 <h5> how does the webpage look on a scale from 1-5?</h5>
@@ -126,7 +136,7 @@ class Connect extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        {/* <!-- photography scale -->
+                        {/* <!-- photography scale --> */}
                         <div class="row">
                             <div class="col-md-12">
                                 <h5> Hows my photography?</h5>
@@ -153,16 +163,16 @@ class Connect extends React.Component {
                             </div>
                         </div>
 
-                        {/* <!-- add new scales or additions to the form here --> 
+                        {/* <!-- add new scales or additions to the form here --> */}
                         <div class="row">
                             <div class="col-md-12">
-                                {/* <!-- submit form --> 
+                                {/* <!-- submit form --> */}
                                 <input type="submit" class="btn btn-success btn-send" value="Send message"></input>
                             </div>
-                        </div> 
+                        </div>
                     </form>
-                </div> */}
-            </div> 
+                </div>
+            </div>
         )
     };
 }
