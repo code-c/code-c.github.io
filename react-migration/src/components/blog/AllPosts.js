@@ -26,20 +26,31 @@ export default function AllPosts() {
 
   return (
     <div>
-      <h2>Blog Posts</h2>
-      <h3>Welcome to my blog posts page!</h3>
-      <div>
-        {allPostsData &&
-          allPostsData.map((post, index) => (
-            <Link to={"/" + post.slug.current} key={post.slug.current}>
-              <span key={index}>
-                <img src={post.mainImage.asset.url} alt="" />
-                <span>
-                  <h2>{post.title}</h2>
-                </span>
-              </span>
-            </Link>
-          ))}
+      <div class="col-12">
+						<h2 class="display text-center headings">Blog</h2>
+      </div>
+
+      <div class="container-fluid padding">
+        <div class="row padding">
+          {allPostsData &&
+            allPostsData.map((post, index) => (
+              <div class="col-md-3">
+                <div class="card">
+                  <Link to={"/" + post.slug.current} key={post.slug.current}>
+                    <span key={index}>
+                      <img src={post.mainImage.asset.url} alt="" />
+                      <span>
+                        <div class="card-body">
+                          <h4 class="card-title">{post.title}</h4>
+                          <button class="btn btn-outline-secondary hvr-grow">See Post</button>
+                        </div>
+                      </span>
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            ))}
+        </div>
       </div>
     </div>
   );

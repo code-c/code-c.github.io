@@ -19,7 +19,7 @@ function Header() {
         <Router>
             <header>
                 <nav id="navbar" class="navbar fixed-top navbar-expand-md navbar-dark">
-                    <a id='name-logo' class="navbar-brand hvr-grow" href="#home">Codie Cottrell</a>
+                    <a id='name-logo' class="navbar-brand hvr-grow" href="/">Codie Cottrell</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -48,7 +48,7 @@ function Header() {
                 <Route exact path="/"> <Home/> </Route>
                 <Route path="/Projects"> <Projects/> </Route>
                 <Route path="/Blog"> <AllPosts/> </Route>
-                <Route path="/Blog:slug"> <OnePost/> </Route>
+                <Route exact path="/:slug"> <OnePost/> </Route>
                 <Route path="/AboutMe"> <AboutMe/> </Route>
                 <Route path="/Connect"> <Connect/> </Route>
             </Switch>
