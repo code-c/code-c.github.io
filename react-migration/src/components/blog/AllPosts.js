@@ -30,11 +30,11 @@ export default function AllPosts() {
 						<h2 class="display text-center headings">Blog</h2>
       </div>
 
-      <div class="container-fluid padding">
-        <div class="row padding">
+      <div class="container-fluid padding blog-layout">
+        {/* <div class="row padding blog-layout"> */}
           {allPostsData &&
             allPostsData.map((post, index) => (
-              <div class="col-md-3">
+              <div class="col-md-4">
                 <div class="card">
                   <Link to={"/" + post.slug.current} key={post.slug.current}>
                     <span key={index}>
@@ -52,6 +52,6 @@ export default function AllPosts() {
             ))}
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
