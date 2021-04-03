@@ -69,19 +69,18 @@ html, body {
   background-color: #7f8c8d;
   border: 1px solid #7f8c8d;
 }
-/*  ---------------- Projects FORMATTING -------------------- */
+/*  ---------------- Card FORMATTING -------------------- */
 
-.blog-layout{
-  margin: 0;
-  position: relative;
+/* flexbox */
+.card-layout{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
+  align-content: center;
 }
 
 .card {
-  position: relative;
-  align-self: center;
   border-radius: 10pt;
   text-align: center;
   background-color: #434A53;
@@ -91,15 +90,14 @@ html, body {
 }
 
 .card img {
-  align-self: center;
-  vertical-align: center;
   border-top-left-radius: 10pt;
   border-top-right-radius: 10pt;
-  width: 248px;
-  height: auto;
 }
 
-.card button {
+/* ------------------ Blog Layout -------------------------- */
+
+.blog {
+  position: static;
 }
 
 
