@@ -97,7 +97,16 @@ html, body {
 /* ------------------ Blog Layout -------------------------- */
 
 .blog {
-  position: static;
+  height: 7000px;
+  background-color: rgb(194, 194, 194);
+}
+
+.blog h2 {
+  color: #3C3B3D;
+}
+
+header {
+  position: absolute;
 }
 
 
