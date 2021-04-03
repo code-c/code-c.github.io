@@ -13,6 +13,8 @@ import Connect from "./Connect";
 import AllPosts from "./blog/AllPosts.js";
 import OnePost from "./blog/OnePost.js";
 
+import Navbar from "react-bootstrap/Navbar";
+
 
 function Header() {
     return(
@@ -47,10 +49,10 @@ function Header() {
             <Switch>
                 <Route exact path="/"> <Home/> </Route>
                 <Route path="/Projects"> <Projects/> </Route>
-                <Route path="/Blog"> <AllPosts/> </Route>
-                <Route exact path="/:slug"> <OnePost/> </Route>
                 <Route path="/AboutMe"> <AboutMe/> </Route>
                 <Route path="/Connect"> <Connect/> </Route>
+                <Route path="/Blog"> <AllPosts/> </Route>
+                <Route path="/:slug"> <OnePost/> </Route>
             </Switch>
         </Router>
     );

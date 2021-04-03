@@ -40,18 +40,18 @@ export default function OnePost() {
   if (!postData) return <div>Loading...</div>;
 
   return (
-    <div>
-      <div>
-        <h2>{postData.title}</h2>
-        <div>
-          <img
-            src={urlFor(postData.authorImage).width(100).url()}
-            alt="Author is Kap"
-          />
-          <h4>{postData.name}</h4>
-        </div>
+    <div class="blog">
+      <div class="col-12">
+        <h2  class="display text-center headings" >{postData.title}</h2>
       </div>
-      <img src={urlFor(postData.mainImage).width(200).url()} alt="" />
+      <div>
+        <img
+          src={urlFor(postData.authorImage).width(100).url()}
+          alt="Author is Kap"
+        />
+        <h4>{postData.name}</h4>
+      </div>
+        <img src={urlFor(postData.mainImage).width(200).url()} alt="" />
       <div>
         <BlockContent
           blocks={postData.body}

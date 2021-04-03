@@ -12,7 +12,7 @@ function Projects() {
 				<div class="row padding">
 
 					{/* <!-- Mountain wave productions project card --> */}
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<div class="card">
 							<a href="#" onclick="prepareNickPage()"><img class="card-img-top" src="static/LogoBlack.png"></img></a>
 							<div class="card-body">
@@ -24,7 +24,7 @@ function Projects() {
 					</div>
 
 					{/* <!-- FERN QUEST cards YEAH! --> */}
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<div class="card">
 							<a href="/FernQuest"><img class="card-img-top" src="static/mushroom.jpg"></img></a>
 							<div class="card-body">
@@ -36,7 +36,7 @@ function Projects() {
 					</div>
 
 					{/* <!-- Maine project card --> */}
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<div class="card">
 							<a href="#" onclick="prepareNickPage()"><img class="card-img-top" src="static/house.jpg"></img></a>
 							<div class="card-body">
