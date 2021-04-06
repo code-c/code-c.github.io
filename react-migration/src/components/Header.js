@@ -2,8 +2,7 @@ import React from 'react';
 import { 
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
 
 import Home from "./Home";
@@ -21,26 +20,36 @@ function Header() {
     return(
         <Router>
             <header>
-                <Navbar className="fixed-top navbar-expand-md navbar-dark">
+                <Navbar expand="md" fixed="top" className="navbar-dark">
                     <Navbar.Brand className="hvr-grow" href="/">Codie Cottrell</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" data-toggle="collapse" data-target="#basic-navbar-nav" aria-expanded="false" aria-label="Toggle navigation" />
-                    <Navbar.Collapse className="collapse" id="basic-navbar-nav">
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ml-md-auto">
+                            <Nav.Item as="li">
                                 <Nav.Link href="/" id='navbar-home-li' className="hvr-grow">
-                                Home
+                                    Home
                                 </Nav.Link>
-                            <Nav.Link id='navbar-projects-li' className="nav-item">
-                                <Link to="/Projects"><a id='navbar-projects-button' className="nav-link hvr-grow">Projects</a></Link>
-                            </Nav.Link>
-                            <Nav.Link id='navbar-connect-li' className="nav-item">
-                                <Link to="/Blog"><a href="/Blog" id='navbar-connect-button'className="nav-link hvr-grow">Blog</a></Link>
-                            </Nav.Link>
-                            <Nav.Link id='navbar-about-me-li' className="nav-item">
-                                <Link to="/AboutMe"> <a href="/AboutMe" id='navbar-about-me-button' className="nav-link hvr-grow">About Me</a></Link>
-                            </Nav.Link>
-                            <Nav.Link id='navbar-connect-li' className="nav-item">
-                                <Link to="/Connect"><a href="/Connect" id='navbar-connect-button'class="nav-link hvr-grow">Connect</a></Link>
-                            </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item as="li">
+                                <Nav.Link href="/Projects" id='navbar-projects-li' className="hvr-grow">
+                                    Projects
+                                </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item as="li">
+                                <Nav.Link href="/Blog" id='navbar-connect-li' className="hvr-grow">
+                                    Blog
+                                </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item as="li">
+                                <Nav.Link href="/AboutMe" id='navbar-about-me-li' className="hvr-grow">
+                                    About Me
+                                </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item as="li">
+                                <Nav.Link href="/Connect" id='navbar-connect-li' className="hvr-grow">
+                                    Connect
+                                </Nav.Link>
+                            </Nav.Item>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

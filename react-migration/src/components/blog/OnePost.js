@@ -3,8 +3,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import sanityClient from "../../client.js";
-import BlockContent from "@sanity/block-content-to-react";
+// import BlockContent from "@sanity/block-content-to-react";
+import Markdown from "react-markdown";
 import imageUrlBuilder from "@sanity/image-url";
+import Image from "react-bootstrap/Image";
+import moment from "moment";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -29,7 +32,8 @@ export default function OnePost() {
            },
          body,
         "name": author->name,
-        "authorImage": author->image
+        "authorImage": author->image,
+        publishedAt
        }`,
         { slug }
       )
@@ -39,25 +43,28 @@ export default function OnePost() {
 
   if (!postData) return <div>Loading...</div>;
 
+ let time = moment(postData.publishedAt).format('MMMM Do YYYY')
+
   return (
-    <div class="blog">
-      <div class="col-12">
-        <h2  class="display text-center headings" >{postData.title}</h2>
-      </div>
-      <div>
-        <img
-          src={urlFor(postData.authorImage).width(100).url()}
-          alt="Author is Kap"
-        />
-        <h4>{postData.name}</h4>
-      </div>
-        <img src={urlFor(postData.mainImage).width(200).url()} alt="" />
-      <div>
-        <BlockContent
-          blocks={postData.body}
-          projectId={sanityClient.clientConfig.projectId}
-          dataset={sanityClient.clientConfig.dataset}
-        />
+    <div class="page-wrap">
+      <div class="post">
+        <img id="post-image" src={urlFor(postData.mainImage).width(200).url()} alt="" />
+        <div id="post-title" class="col-12">
+          <h2>{postData.title}</h2>
+        </div>
+        <div id="post-author-info">
+          <Image
+            src={urlFor(postData.authorImage).width(40).url()}
+            alt=""
+            roundedCircle
+          />
+          <p>{postData.name} on {time}</p>
+        </div>
+        <div id="content">
+          <Markdown
+          source={postData.body}
+          />
+        </div>
       </div>
     </div>
   );

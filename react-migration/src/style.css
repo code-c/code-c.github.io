@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Raleway&display=swap');
 
+html {
+  --maxWidth: 1200px;
+  --gap: 2rem;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -83,6 +88,11 @@ html, body {
   align-content: center;
 }
 
+/* spacing between card on wrap */
+.card-layout > * {
+  margin: 10px;
+}
+
 .card {
   border-radius: 10pt;
   text-align: center;
@@ -97,19 +107,56 @@ html, body {
   border-top-right-radius: 10pt;
 }
 
-/* ------------------ Blog Layout -------------------------- */
+/* ------------------ Blog Post Layout -------------------------- */
 
-.blog {
-  height: 7000px;
-  background-color: rgb(194, 194, 194);
+.page-wrap {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  margin-top: 10%;
+  padding: 0 var(--gap);
 }
 
-.blog h2 {
+.page-wrap > * {
+  box-sizing: border-box;
+}
+
+.post {
+  margin: 0 auto;
+  border-radius: 1em;
+  height: 1000px;
+  background-color:rgba(32,33,36,0.96);
+}
+
+#post-image {
+  
+}
+
+#post-author-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+#post-author-info > * {
+  margin-left: 10px;
+}
+
+#post-author-info p {
+  margin-top: 1em;
+  color: #3C3B3D;
+  align-self: center;
+}
+
+.post h2 {
   color: #3C3B3D;
 }
 
-header {
-  position: absolute;
+#content {
+  border-radius: 1em;
+  color: #3C3B3D;
+  text-align: center;
+  background-color: #fff;
 }
 
 
