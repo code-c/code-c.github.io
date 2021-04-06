@@ -29,15 +29,14 @@ export default function AllPosts() {
   return (
     <div>
       <div class="col-12">
-						<h2 class="display text-center headings">Blog</h2>
+						<h2 class="display text-center headings">Blog Posts</h2>
       </div>
 
       <div class="container-fluid padding card-layout">
-        {/* <div class="row padding blog-layout"> */}
           {allPostsData &&
             allPostsData.map((post, index) => (
               <Link to={"/" + post.slug.current} key={post.slug.current}>
-                {/* card n link to make whole div clickable */}
+                {/* card is in link to make whole div clickable */}
                 <Card>
                   <span key={index}>
                     <Card.Img src={post.mainImage.asset.url} alt="" />
