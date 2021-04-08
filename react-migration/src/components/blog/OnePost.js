@@ -9,6 +9,9 @@ import imageUrlBuilder from "@sanity/image-url";
 import Image from "react-bootstrap/Image";
 import moment from "moment";
 
+//styling
+import "../../styles/blog.css";
+
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
   return builder.image(source);
@@ -43,23 +46,29 @@ export default function OnePost() {
 
   if (!postData) return <div>Loading...</div>;
 
- let time = moment(postData.publishedAt).format('MMMM Do YYYY')
+ let time = moment(postData.publishedAt).format('MMMM Do YYYY');
+
+ let postImageUrl = urlFor(postData.mainImage).url();
 
   return (
-    <div class="page-wrap">
-      <div class="post">
-        <img id="post-image" src={urlFor(postData.mainImage).width(200).url()} alt="" />
-        <div id="post-title" class="col-12">
-          <h2>{postData.title}</h2>
-        </div>
-        <div id="post-author-info">
-          <Image
-            src={urlFor(postData.authorImage).width(40).url()}
-            alt=""
-            roundedCircle
-          />
-          <p>{postData.name} on {time}</p>
-        </div>
+    <div class="page-wrap"
+    style={{
+      backgroundImage: `url(${postImageUrl})`
+    }}>
+      <div class="post post-scroll">
+        <div id="post-header">
+          <div id="post-title">
+            <h2>{postData.title}</h2>
+          </div>
+          <div id="post-author-info">
+            <Image
+              src={urlFor(postData.authorImage).width(40).url()}
+              alt=""
+              roundedCircle
+            />
+            <p>{postData.name} on {time}</p>
+          </div>
+          </div>
         <div id="content">
           <Markdown
           source={postData.body}
