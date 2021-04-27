@@ -1,16 +1,18 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import SwiperCore, { Navigation, Pagination} from 'swiper';
+import SwiperCore, { Navigation, Pagination, EffectCoverflow} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
 
 // styles 
-// import 'swiper/swiper.scss';
-// import 'swiper/components/navigation/navigation.scss';
-// import 'swiper/components/pagination/pagination.scss';
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/effect-coverflow/effect-coverflow.scss';
+import './../styles/about.css';
 
 //swipe module import
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, EffectCoverflow]);
 
 
 function AboutMe() {
@@ -52,33 +54,60 @@ function AboutMe() {
 					<h3>Coding!</h3>
 
 				{/* passion subitle */}
-				<p>Im so curious about it so much I got a masters in it</p>
+				<p>Im so curious about it I got a masters</p>
 
 				{/* passion photo/something reel */}
-					<Carousel.Item id='slide1'>
-						<img className="d-block w-100" src="static/barHarbor.jpg" alt="first slide"></img>
-					</Carousel.Item>
-
-					<Carousel.Item id='slide2'>
-						<img className="d-block w-100"  src="static/mushroom2.jpg" alt="second slide"></img>
-					</Carousel.Item>
 
 				<Swiper
+					centeredSlides = {true}
+					loop = {true}
+					grabCursor = {true}
 					spaceBetween={50}
-					slidesPerView={1}
+					slidesPerView={'auto'}
 					navigation
 					pagination={{ clickable: true }}
 					scrollbar={{ draggable: true }}
-					onSwiper={(swiper) => console.log(swiper)}
-					onSlideChange={() => console.log('slide change')}
+					className = "slide-container"
 				>	
 					{/* passion photo/something reel */}
 					<SwiperSlide id='slide1'>
-						<img className="d-block w-100" src="static/barHarbor.jpg" alt="first slide"></img>
+						<img className="logo-slide" src="static/python.png" alt="first slide"></img>
 					</SwiperSlide>
 
 					<SwiperSlide id='slide2'>
-						<img className="d-block w-100"  src="static/mushroom2.jpg" alt="second slide"></img>
+						<img className="logo-slide"  src="static/cpp.png" alt="second slide"></img>
+					</SwiperSlide>
+
+					<SwiperSlide id='slide3'>
+						<img className="logo-slide"  src="static/java.png" alt="second slide"></img>
+					</SwiperSlide>
+
+					<SwiperSlide id='slide4'>
+						<img className="logo-slide"  src="static/js.png" alt="second slide"></img>
+					</SwiperSlide>
+
+					<SwiperSlide id='slide4'>
+						<img className="logo-slide"  src="static/wasm.png" alt="second slide"></img>
+					</SwiperSlide>
+
+					<SwiperSlide id='slide5'>
+						<img className="logo-slide"  src="static/html.png" alt="second slide"></img>
+					</SwiperSlide>
+
+					<SwiperSlide id='slide6'>
+						<img className="logo-slide"  src="static/css.png" alt="second slide"></img>
+					</SwiperSlide>
+
+					<SwiperSlide id='slide7'>
+						<img className="logo-slide"  src="static/react.png" alt="second slide"></img>
+					</SwiperSlide>
+
+					<SwiperSlide id='slide8'>
+						<img className="logo-slide"  src="static/rpi.png" alt="second slide"></img>
+					</SwiperSlide>
+
+					<SwiperSlide id='slide9'>
+						<img className="logo-slide"  src="static/linux.png" alt="second slide"></img>
 					</SwiperSlide>
 
 				</Swiper>
@@ -91,20 +120,49 @@ function AboutMe() {
 					<h3>Photography</h3>
 
 				{/* passion subitle */}
-				<p>Im so curious about it so much I got a masters in it</p>
+				<p>more broadly I've always been interested in capturing the beauty of nature and <br></br>
+				capturing memories. Be it through video or photo.</p>
 
 				{/* passion photo/something reel */}
-				<Carousel id='passion-display' >
-                
-					<Carousel.Item id='slide1'>
-						<img className="d-block w-100" src="static/barHarbor.jpg" alt="first slide"></img>
-					</Carousel.Item>
+				<Swiper
+					centeredSlides = {true}
+					loop = {true}
+					grabCursor = {true}
+					effect = "coverflow"
+					spaceBetween={50}
+					slidesPerView={'auto'}
+					coverflowEffect = {{
+						rotate: 50,
+						 slideShadows: false,
+					  }}
+					navigation
+					pagination={{ clickable: true }}
+					scrollbar={{ draggable: true }}
+					className = "slide-container"
+				>	
+					{/* passion photo/something reel */}
+					<SwiperSlide id='slide1'>
+						<img className="image-slide" src="static/barHarbor.jpg" alt="first slide"></img>
+					</SwiperSlide>
 
-					<Carousel.Item id='slide2'>
-						<img className="d-block w-100"  src="static/mushroom2.jpg" alt="second slide"></img>
-					</Carousel.Item>
+					<SwiperSlide id='slide2'>
+						<img className="image-slide"  src="static/mushroom2.jpg" alt="second slide"></img>
+					</SwiperSlide>
 
-            	</Carousel>
+					<SwiperSlide id='slide2' >
+						<img className="image-slide"  src="static/mushroom.jpg" alt="second slide"></img>
+					</SwiperSlide>
+
+					<SwiperSlide id='slide2' >
+						<img className="image-slide"  src="static/clearBlue.jpg" alt="second slide"></img>
+					</SwiperSlide>
+
+					<SwiperSlide id='slide2' >
+						<img className="image-slide"  src="static/reflect.jpg" alt="second slide"></img>
+					</SwiperSlide>
+
+
+				</Swiper>
 
 			</div>
 
