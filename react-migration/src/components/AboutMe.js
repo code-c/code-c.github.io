@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import SwiperCore, { Navigation, Pagination, EffectCoverflow} from 'swiper';
+import SwiperCore, {Navigation, Pagination, EffectCoverflow} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
 
@@ -129,16 +129,24 @@ function AboutMe() {
 					loop = {true}
 					grabCursor = {true}
 					effect = "coverflow"
-					spaceBetween={50}
-					slidesPerView={'auto'}
+					spaceBetween={10}
+					slidesPerView={1.5}
+					watchOverflow={true}
 					coverflowEffect = {{
 						rotate: 50,
-						 slideShadows: false,
+						slideShadows: false,
 					  }}
 					navigation
 					pagination={{ clickable: true }}
 					scrollbar={{ draggable: true }}
 					className = "slide-container"
+
+					breakpoints= {{
+						499: {
+							spaceBetween: 10,
+							slidesPerView: 2,
+						},
+					}}
 				>	
 					{/* passion photo/something reel */}
 					<SwiperSlide id='slide1'>

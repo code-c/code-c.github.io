@@ -4,29 +4,15 @@
 
 .logo-slide {
     width: 70%;
-    max-width: 200px;
-    max-height: 200px;
-    height:auto;
-}
-
-@media screen and (min-width: 775){
-    .swiper-slide {
-        width: auto;
-    }
-
-    .image-slide {
-        border-radius: 1em;
-        width: 10%;
-        max-width: 800px;
-        /* height: auto; */
-    }
+    max-width: 150px;
+    max-height: 150px;
+    height: auto;
 }
 
 .image-slide {
     border-radius: 1em;
     width: 80%;
     max-width: 800px;
-    /* height: auto; */
 }
 
 .slide-container {

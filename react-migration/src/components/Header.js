@@ -30,7 +30,7 @@ function Header() {
                                     Home
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="li">
+                            {/* <Nav.Item as="li">
                                 <Nav.Link href="/Projects" id='navbar-projects-li' className="hvr-grow">
                                     Projects
                                 </Nav.Link>
@@ -39,7 +39,7 @@ function Header() {
                                 <Nav.Link href="/Blog" id='navbar-connect-li' className="hvr-grow">
                                     Blog
                                 </Nav.Link>
-                            </Nav.Item>
+                            </Nav.Item> */}
                             <Nav.Item as="li">
                                 <Nav.Link href="/AboutMe" id='navbar-about-me-li' className="hvr-grow">
                                     About Me
