@@ -1,151 +1,145 @@
-import React from "react";
-import ReactDOM from 'react-dom';
-import emailJS, {init} from 'emailjs-com';
-init("user_xTGxpp4bUawlgttagFsxn");
+import React, {useState} from "react";
+import emailjs from 'emailjs-com';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Toast from 'react-bootstrap/Toast';
+import { calendarFormat } from "moment";
 
-class Connect extends React.Component {
 
-    // constructor for form handling
-    state = {
-        firstName: "",
-        lastName: "",
-        email: "",
-        message: "",
-    };
 
-    sendEmail (event) {
-    event.preventDefault();
 
-    const {
-        firstName, 
-        lastName,
-        email,
-        message
-        } = this.state;
+function Connect() {
+    const [form, setForm] = useState(0);
+    const [errors, setErrors] = useState(0);
+    const [show, setShow] = useState(false);
 
-    let templateParams = {
-        from_name: firstName + lastName,
-        to_name: 'Codie',
-        message: message,
-        from_email: email
+    // grab the form data
+    const setFeild = (field, value) => {
+        setForm({
+            ...form,
+            [field]: value
+        })
+        // Check and see if errors exist, if not we remove them
+        if ( !!errors[field] ) setErrors({
+        ...errors,
+        [field]: null
+        })
     }
+
+    const checkEmail = (email) => {
+        var emailRegex = /\S+@\S+\.\S+/;
+
+        return emailRegex.test(email);
+    }
+
+    const findFormErrors = () => {
+        const {name, email, message} = form
+        const newErrors = {}
+
+        //name errors/restricting length
+        if (!name || name==='') newErrors.name = 'you must provide a name...'
+        else if (name.length > 40) newErrors.name = 'name is too long!'
         
-    emailJS.send('gmail', 'service_hkp5dml', 'web_reply', templateParams)
-}
-    
-    handleChange(event) {    
-        event.preventDefault();
-        const target = event.target;
-        const firstName = target.firstName;
-        const lastName = target.lastName;
-        const email = target.email;
-        const message = target.message;
-        const value = target.value;
+        //email errors 
+        if (!email || email==='') newErrors.email = 'you must provide an email!'
+        if (!checkEmail(email)) newErrors.email = 'enter correct format "you@example.com"'
 
-        this.setState({
-            [firstName]: value,
-            [lastName]: value,
-            [email]: value,
-            [message]: value,
-        });
-        console.log(firstName)
+        //message section
+        if (!message || message==='') newErrors.message = 'you should write something!'
+        else if (message.length > 300) newErrors.message = 'you have reached character limit'
+        return newErrors
     }
+    
+    function sendEmail(e) {
+      e.preventDefault();
+        
+      //get any errors
+      const newErrors = findFormErrors();
 
+      //check if we got some errors
+      if ( Object.keys(newErrors).length > 0 ) {
+        // We got errors!
+        setErrors(newErrors)
+      } else {
+          //clear form
+            document.getElementById('connectForm').reset();
 
-    render (){
-        return (
-            <div id='connect-section'>
-
-                {/* <!-- Form section --> */}
-                <div id='connect-form' class="connect-form">
-                    <h1 class="display text-center form-title">Contact Me:</h1>
-                    <form 
-                        id={this.props.id}
-                        name={this.props.name}
-                        method={this.props.method}
-                        action={this.props.action}
-                        onSubmit = {this.sendEmail.bind(this)}
-                    >
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    {/* <!-- first name --> */}
-                                    <label for="form-name">First name *</label>
-                                    <input 
-                                        id='firstName' 
-                                        name="firstName" 
-                                        onChange={this.handleChange.bind(this)} 
-                                        className="form-control" 
-                                        placeholder="Please enter your first name" 
-                                        required data-error="Firstname is required">
-                                    </input>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    {/* <!-- last name --> */}
-                                    <label for="form-lastname">Last name *</label>
-                                    <input 
-                                        id= 'lastName' 
-                                        name="lastName" 
-                                        onChange={this.handleChange.bind(this)} 
-                                        className="form-control" 
-                                        placeholder="last name" 
-                                        required data-error="Firstname is required">
-                                    </input>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    {/* <!-- email --> */}
-                                    <label for="form_email">Email *</label>
-                                    <input 
-                                        id="email" 
-                                        type="email" 
-                                        name="email" 
-                                        onChange={this.handleChange.bind(this)} 
-                                        className="form-control" 
-                                        placeholder="Please enter your email *" 
-                                        required data-error="Valid email is required.">
-                                    </input>
-                                    <div className="help-block with-errors"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    {/* <!-- message --> */}
-                                    <label for="form_message">Message *</label>
-                                    <textarea 
-                                        id="message" 
-                                        name="message"
-                                        onChange={this.handleChange.bind(this)} 
-                                        className="form-control" 
-                                        placeholder="Message for me *" 
-                                        rows="4" 
-                                        required data-error="Please, leave us a message.">
-                                    </textarea>
-                                    <div className="help-block with-errors"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* <!-- add new scales or additions to the form here --> */}
-                        <div class="row">
-                            <div className="col-md-12">
-                                {/* <!-- submit form --> */}
-                                <input type="submit" class="btn btn-success btn-send" value="Send message"></input>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+          //send email to me using emailjs
+        emailjs.send('service_9l2xd69', 'web_reply', form, 'user_xTGxpp4bUawlgttagFsxn')
+            .then((result) => {
+                console.log(result.text);
+                //show popup
+                setShow(true);
+            }, (error) => {
+                console.log(error.text);
+            });
+        }
+    }
+  
+    return (
+        <div className='connect-section'>
+            <div id='connect-form' class="connect-form">
+               <h1 class="display text-center form-title">Contact Me:</h1>
+                <Form 
+                id = "connectForm"
+                //ref={ form => this.messageForm = form } 
+                onSubmit={sendEmail}
+                >
+                    <Form.Group>
+                        <Form.Label>Name</Form.Label>
+                        <Form.Control 
+                            type="text" 
+                            placeholder="John Seed"
+                            name="name"
+                            onChange={e => setFeild('name', e.target.value)}
+                            isInvalid = {!!errors.name}
+                        />
+                        <Form.Control.Feedback type='invalid'>
+                            {errors.name}
+                        </Form.Control.Feedback>
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control 
+                            type="email" 
+                            placeholder="johnseed@example.com"
+                            name="email"
+                            onChange={e => setFeild('email', e.target.value)}
+                            isInvalid = {!!errors.email}
+                        />
+                        <Form.Control.Feedback type='invalid'>
+                            {errors.email}
+                        </Form.Control.Feedback>
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Message</Form.Label>
+                        <Form.Control 
+                            as='textarea' 
+                            placeholder="your message here..."
+                            name="message"
+                            onChange={e => setFeild('message', e.target.value)}
+                            isInvalid = {!!errors.message}
+                        />
+                        <Form.Control.Feedback type='invalid'>
+                            {errors.message}
+                        </Form.Control.Feedback>
+                    </Form.Group>
+                    <Button type='submit' value="Submit">Send</Button>
+                </Form>
             </div>
-        )
-    };
-}
+            <Toast 
+                onClose={() => setShow(false)} 
+                show={show} 
+                delay={6000} autohide
+            >
+                <Toast.Header>
+                    <strong className="mr-auto">Submitted!</strong>
+                    <small>now</small>
+                </Toast.Header>
+                <Toast.Body>Thank you for reaching out! I should get back to you soon</Toast.Body>
+            </Toast>
+        </div>
+    );
+  }
 
-export default Connect;
+  export default Connect;
