@@ -1,0 +1,65 @@
+/*  ---------------- Connect FORMATTING -------------------- */
+
+.connect {
+    padding: 1em;
+    background-color: #3C3B3D;
+}
+
+.connect-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    vertical-align: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.connect-title {
+    color:#bdc3c7;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.profiles {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.profiles img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.15);
+}
+
+.connect-text {
+    padding-bottom: 3em;
+}
+
+
+.connect-form {
+    width: 500px;
+    text-align: left;
+    color: #7eb7cc;
+    padding-top: 5px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.connect-form button {
+    color: #7eb7cc;
+    border-color: #7eb7cc;
+}
+
+.connect-form-button {
+    text-align: center;
+}
+
+.submit-message {
+    color: #3C3B3D;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.15);
+}

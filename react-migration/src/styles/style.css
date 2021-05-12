@@ -39,44 +39,6 @@ html, body {
   background-color: transparent;
 }
 
-/*  ---------------- Carousel FORMATTING -------------------- */
-
-.carousel-inner img {
-  width: 100%;
-  height: 100%;
-}
-.carousel-caption {
-  font-family: Playfair;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-40%);
-}
-
-.carousel-caption img {
-  width: 450px;
-  height: auto;
-  transform: translateY(-20%);
-}
-
-.carousel-caption h1 {
-  font-size: 500%;
-  text-shadow: 1px 1px 15px #000;
-}
-.carousel-caption h4 {
-  font-size: 200%;
-  font-style: italic;
-  font-weight: 500;
-  text-shadow: 1px 1px 10px #000;
-}
-
-.btn-primary {
-  background-color: transparent;
-  border: 1px solid #95a5a6;
-}
-.btn-primary:hover {
-  background-color: #7f8c8d;
-  border: 1px solid #7f8c8d;
-}
 /*  ---------------- Card FORMATTING -------------------- */
 
 /* flexbox */
@@ -108,53 +70,6 @@ html, body {
 }
 
 
-
-/*  ---------------- About Me FORMATTING -------------------- */
-
-.about {
-  text-align: center;
-  vertical-align: center;
-}
-
-.personal-photo {
-  border-radius: 50%;
-  width: 200px;
-  height: auto;
-}
-
-
-/*  ---------------- Connect FORMATTING -------------------- */
-
-.connect {
-    /* background: url('../public/static/purpleRiver.jpg') center center fixed; */
-    background-size: cover;
-    color: #bdc3c7;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.intro-text {
-  padding-top: 400px;
-  padding-bottom: 300px;
-  padding-left: 40px;
-  text-shadow: 4px 4px 6px #7F8C8D;
-  font-weight: bold;
-}
-
-.form-title {
-  color:#bdc3c7;
-  padding-top: 70px;
-  padding-bottom: 20px;
-}
-
-.connect-form {
-  background-color: #3C3B3D;
-  color: #4FC1E9;
-  padding-top: 5px;
-  padding-bottom: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
 
 /*  ---------------- Footer FORMATTING -------------------- */
 

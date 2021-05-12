@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Toast from 'react-bootstrap/Toast';
 import { calendarFormat } from "moment";
+import "./../styles/connect.css";
 
 
 
@@ -77,13 +78,14 @@ function Connect() {
     }
   
     return (
-        <div className='connect-section'>
-            <div id='connect-form' class="connect-form">
-               <h1 class="display text-center form-title">Contact Me:</h1>
+        <div className='connect'>
+            <h1 className="connect-title">Connect With Me</h1>
+            <div className='connect-body'>
                 <Form 
                 id = "connectForm"
                 //ref={ form => this.messageForm = form } 
                 onSubmit={sendEmail}
+                className = "connect-form"
                 >
                     <Form.Group>
                         <Form.Label>Name</Form.Label>
@@ -93,17 +95,17 @@ function Connect() {
                             name="name"
                             onChange={e => setFeild('name', e.target.value)}
                             isInvalid = {!!errors.name}
-                        />
-                        <Form.Control.Feedback type='invalid'>
-                            {errors.name}
-                        </Form.Control.Feedback>
-                    </Form.Group>
-                    <Form.Group>
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control 
+                            />
+                            <Form.Control.Feedback type='invalid'>
+                                {errors.name}
+                            </Form.Control.Feedback>
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control 
                             type="email" 
                             placeholder="johnseed@example.com"
-                            name="email"
+                            name="name"
                             onChange={e => setFeild('email', e.target.value)}
                             isInvalid = {!!errors.email}
                         />
@@ -124,20 +126,34 @@ function Connect() {
                             {errors.message}
                         </Form.Control.Feedback>
                     </Form.Group>
-                    <Button type='submit' value="Submit">Send</Button>
+                    <div className="connect-form-button">
+                        <Button type='submit' value="Submit">Send</Button>
+                    </div>
                 </Form>
-            </div>
-            <Toast 
+                <div className='connect-text'> 
+                    <p>
+                        You can connect with me via the form <br></br> 
+                        and I will email you back shortly or <br></br>
+                        you can reach out via one of the channels below! <br></br> 
+                        I look forward to hearing from you!
+                    </p>
+                    <div className='profiles'>
+                        <img src="static/linkedin.webp"></img>
+                    </div>
+                </div>
+                <Toast 
                 onClose={() => setShow(false)} 
                 show={show} 
                 delay={6000} autohide
+                className="submit-message"
             >
                 <Toast.Header>
-                    <strong className="mr-auto">Submitted!</strong>
+                    <strong className="mr-auto">Email Sent!</strong>
                     <small>now</small>
                 </Toast.Header>
                 <Toast.Body>Thank you for reaching out! I should get back to you soon</Toast.Body>
             </Toast>
+            </div>
         </div>
     );
   }

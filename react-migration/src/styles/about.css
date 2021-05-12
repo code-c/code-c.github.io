@@ -1,3 +1,19 @@
+
+/*  ---------------- About Me FORMATTING -------------------- */
+
+
+
+.about {
+    text-align: center;
+    vertical-align: center;
+  }
+  
+  .personal-photo {
+    border-radius: 50%;
+    width: 200px;
+    height: auto;
+  }
+
 .swiper-slide {
     width: auto;
 }
