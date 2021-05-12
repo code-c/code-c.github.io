@@ -1,5 +1,4 @@
 import React from "react";
-import Carousel from 'react-bootstrap/Carousel';
 import SwiperCore, {Navigation, Pagination, EffectCoverflow} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
@@ -59,11 +58,11 @@ function AboutMe() {
 				{/* passion photo/something reel */}
 
 				<Swiper
-					centeredSlides = {true}
-					loop = {true}
+					initialSlide = {0}
 					grabCursor = {true}
-					spaceBetween={50}
+					spaceBetween={10}
 					slidesPerView={'auto'}
+					loop = {true}
 					navigation
 					pagination={{ clickable: true }}
 					scrollbar={{ draggable: true }}
@@ -177,24 +176,12 @@ function AboutMe() {
 			{/* passion */}
 			<div class="passions col-12">
 				{/* passion title */}
-					<h3>Outdoor Adventure</h3>
+					{/* <h3>Outdoor Adventure</h3> */}
 
 				{/* passion subitle */}
-				<p>from mtn bike riding, to surfing, to long treks</p>
+				{/* <p>from mtn bike riding, to surfing, to long treks</p> */}
 
-				{/* passion photo/something reel */}
-				<Carousel id='passion-display' >
-                
-					<Carousel.Item id='slide1'>
-						<img className="d-block w-100" src="static/barHarbor.jpg" alt="first slide"></img>
-					</Carousel.Item>
-
-					<Carousel.Item id='slide2'>
-						<img className="d-block w-100"  src="static/mushroom2.jpg" alt="second slide"></img>
-					</Carousel.Item>
-
-            	</Carousel>
-
+				
 			</div>
 
 
