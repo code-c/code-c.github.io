@@ -1,18 +1,30 @@
 
 /*  ---------------- About Me FORMATTING -------------------- */
 
-
-
 .about {
     text-align: center;
     vertical-align: center;
   }
+
+.profiles {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.profiles img {
+    width: 50px;
+    margin: 1em;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.15);
+}
   
-  .personal-photo {
+.personal-photo {
     border-radius: 50%;
     width: 200px;
     height: auto;
-  }
+    box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.30);
+}
 
 .swiper-slide {
     width: auto;
@@ -26,14 +38,20 @@
 }
 
 .image-slide {
-    border-radius: 1em;
+    border-radius: .5em;
     width: 80%;
     max-width: 800px;
+    box-shadow: 0px 10px 20px 10px rgba(0,0,0,0.30);
+    -webkit-box-reflect: below 2px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(255,255,255,0.5)));
 }
 
 .slide-container {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+.image-slider {
+    height: 600px;
 }
 

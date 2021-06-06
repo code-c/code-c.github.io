@@ -1,5 +1,5 @@
 import React from "react";
-import SwiperCore, {Navigation, Pagination, EffectCoverflow} from 'swiper';
+import SwiperCore, {Navigation, Pagination, EffectCoverflow, Mousewheel} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
 
@@ -11,7 +11,7 @@ import 'swiper/components/effect-coverflow/effect-coverflow.scss';
 import './../styles/about.css';
 
 //swipe module import
-SwiperCore.use([Navigation, Pagination, EffectCoverflow]);
+SwiperCore.use([Navigation, Pagination, EffectCoverflow, Mousewheel]);
 
 
 function AboutMe() {
@@ -33,39 +33,47 @@ function AboutMe() {
 
 			<div class="col-12">
                 <p>Recent Grad from UVM with a Masters in Computer Science, <br></br>
-                    I am a self motivated software engineer devoted to delivering quality code. <br></br>
+                    I am a self motivated Software Egineer devoted to learning the craft. <br></br>
                     I am always building my knowledge and currently I am looking for a Junior Software Engineering position.
                 </p>
                 <div class=" col-lg-12 sub-section">
                     <p>
-                        To know more about me,<br></br>
+                        Check out my resume,<br></br>
                     </p>
         	    <a href="static/Resume.pdf" target="_blank" class="btn btn-warning">View Resume</a>
       	        </div>
-				<div class=" col-lg-12 sub-section">
-        	        <p><br></br></p>
+				<div class="profiles">
+					<a href="https://github.com/code-c" target="blank">
+                        <img className="hvr-grow" src="static/github.webp"></img>
+					</a>
+					<a href="https://stackoverflow.com/users/14694356/codie-cottrell?tab=profile" target="blank">
+						<img className="hvr-grow" src="static/stackoverflow.webp"></img>
+					</a>
 				</div>
 			</div>
 
 			{/* passion */}
 			<div class="passions col-12">
 				{/* passion title */}
-					<h3>Coding!</h3>
+					<h3>Computers & Technology</h3>
 
 				{/* passion subitle */}
-				<p>Im so curious about it I got a masters</p>
+				<p>I didnt always write code. I mostly just fiddled around with any peice of tech I could find <br></br>
+				Im proud to say out of pure curiousity and love for Technology I've been growing my repertoire. Below are the most used mediums and languages.
+				</p>
 
 				{/* passion photo/something reel */}
 
 				<Swiper
 					initialSlide = {0}
-					grabCursor = {true}
+					grabCursor = {false}
 					spaceBetween={10}
 					slidesPerView={'auto'}
 					loop = {true}
 					navigation
 					pagination={{ clickable: true }}
 					scrollbar={{ draggable: true }}
+					mousewheel
 					className = "slide-container"
 				>	
 					{/* passion photo/something reel */}
@@ -116,11 +124,13 @@ function AboutMe() {
 			{/* passion */}
 			<div class="passions col-12">
 				{/* passion title */}
-					<h3>Photography</h3>
+					<h3>Photography?</h3>
 
 				{/* passion subitle */}
-				<p>more broadly I've always been interested in capturing the beauty of nature and <br></br>
-				capturing memories. Be it through video or photo.</p>
+				<p>Yes! If you came here for my photography, then here are some teasers before the new page is up. <br></br> 
+				I've always been interested in capturing the beauty of nature and candid memories. Be it through video or photo. <br></br>
+				If you've got nothing to do just take a scroll! 
+				</p>
 
 				{/* passion photo/something reel */}
 				<Swiper
@@ -138,7 +148,7 @@ function AboutMe() {
 					navigation
 					pagination={{ clickable: true }}
 					scrollbar={{ draggable: true }}
-					className = "slide-container"
+					className = "slide-container image-slider"
 
 					breakpoints= {{
 						499: {

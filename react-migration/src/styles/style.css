@@ -19,8 +19,19 @@ html, body {
 }
 
 .App {
-  background-image: linear-gradient(to bottom right, #323133, #4a4055)
+  background-image: linear-gradient(to bottom right, 
+    #434343,
+    #3B3B3B,
+    #323232,
+    #2A2A2A,
+    #222222,
+    #191919,
+    #111111,
+    #080808,
+    #000000
+    )
 }
+
 
 /*  ---------------- NAVBAR FORMATTING -------------------- */
 .navbar {
@@ -88,7 +99,7 @@ html, body {
 /*  ---------------- Footer FORMATTING -------------------- */
 
 footer {
-  background-color: #323133;
+  /* background-color: #323133; */
   color: #bdc3c7;
 }
 
