@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Link from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
-import HomeSlides from './HomeSlides';
+import HomeSlides from './HomeSlides.jsx';
 import AboutMe from './AboutMe';
 import Connect from './Connect';
 

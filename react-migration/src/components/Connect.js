@@ -138,7 +138,9 @@ function Connect() {
                         I look forward to hearing from you!
                     </p>
                     <div className='profiles'>
-                        <img src="static/linkedin.webp"></img>
+                        <a href="https://www.linkedin.com/in/codie-cottrell/" target="blank">
+                        <img className="hvr-grow" src="static/linkedin.webp"></img>
+                        </a>
                     </div>
                 </div>
                 <Toast 

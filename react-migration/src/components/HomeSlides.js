@@ -1,17 +1,14 @@
 import React, {Component} from 'react';
-import SwiperCore, {Navigation, Pagination, EffectCoverflow} from 'swiper';
+import SwiperCore, {Navigation, EffectCoverflow, Autoplay} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
-import '../styles/style.css';
 
 // styles 
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
-import 'swiper/components/pagination/pagination.scss';
-import 'swiper/components/effect-coverflow/effect-coverflow.scss';
 
 //swipe module import
-SwiperCore.use([Navigation, Pagination, EffectCoverflow]);
+SwiperCore.use([Navigation, EffectCoverflow, Autoplay]);
 
 function HomeSlides() {
  
@@ -30,8 +27,11 @@ function HomeSlides() {
                     rotate: 50,
                     slideShadows: false,
                 }}
+                autoplay = {{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                }}
                 navigation
-                pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
                 className = "home-slide-container"
             >	

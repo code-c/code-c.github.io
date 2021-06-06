@@ -12,11 +12,26 @@ html, body {
   font-family: 'Raleway', sans-serif;
   color: #bdc3c7;
   background-color: #323133;
-}
+  }
 
 .headings {
   padding-top: 70px;
 }
+
+.App {
+  background-image: linear-gradient(to bottom right, 
+    #434343,
+    #3B3B3B,
+    #323232,
+    #2A2A2A,
+    #222222,
+    #191919,
+    #111111,
+    #080808,
+    #000000
+    )
+}
+
 
 /*  ---------------- NAVBAR FORMATTING -------------------- */
 .navbar {
@@ -37,6 +52,16 @@ html, body {
 .nav-link {
   font-size: 1em !important;
   background-color: transparent;
+}
+
+
+.btn-primary {
+  background-color: transparent;
+  border: 1px solid #95a5a6;
+}
+.btn-primary:hover {
+  background-color: #4d4d4d;
+  border: 1px solid #7f8c8d;
 }
 
 /*  ---------------- Card FORMATTING -------------------- */
@@ -74,7 +99,7 @@ html, body {
 /*  ---------------- Footer FORMATTING -------------------- */
 
 footer {
-  background-color: #323133;
+  /* background-color: #323133; */
   color: #bdc3c7;
 }
 
