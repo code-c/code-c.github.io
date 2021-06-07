@@ -47,7 +47,7 @@ const HomeSlides = () => {
           data-swiper-parallax={parallaxAmount}
           data-swiper-parallax-opacity={parallaxOpacity}
         >
-          <img src={image1} alt="image1"></img>
+          <img src="static/main.png" alt="image1"></img>
         </div>
         <div className="col-md-6 offset-md-3 my-auto text-center text-white">
           <h1 className="text-uppercase mb-2 font-weight-bold">Welcome To My Page</h1>
@@ -62,7 +62,7 @@ const HomeSlides = () => {
           data-swiper-parallax={parallaxAmount}
           data-swiper-parallax-opacity={parallaxOpacity}
         >
-          <img src={image2} alt="image2"></img>
+          <img src="static/wave.png" alt="image2"></img>
         </div>
         <div className="col-md-6 offset-md-3 my-auto text-center text-white">
           <h1 className="text-uppercase mb-2 font-weight-bold">Check out my blog!</h1>
@@ -79,7 +79,7 @@ const HomeSlides = () => {
           data-swiper-parallax={parallaxAmount}
           data-swiper-parallax-opacity={parallaxOpacity}
         >
-          <img src="static/clearBlue.jpg" alt="image3"></img>
+          <img src="static/game.png" alt="image3"></img>
         </div>
         <div className="col-md-6 offset-md-3 my-auto text-center text-white">
           <h1 className="text-uppercase mb-2 font-weight-bold">A Game???</h1>

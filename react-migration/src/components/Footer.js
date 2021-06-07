@@ -23,6 +23,7 @@ function Footer() {
                         <hr class="light"></hr>
                         <p>(207) 745 4193</p>
                     </div>
+                    <div><a href='https://pngtree.com/so/curve'>curve png from pngtree.com</a></div>
                 </div>
             </div>
         </footer>
