@@ -34,13 +34,13 @@
 }
 
 .reset {
-    width: 100px;
-    height: 30px;            
+    width: 80px;
+    height: 40px;            
     position: absolute;
-    top: 25%;
-    left: 60%;
-    margin-top: -15px;
-    margin-left: -50px;
+    top: 18%;
+    left: 57%;
+    margin-top: -30px;
+    margin-left: -40px;
 
 }
 
