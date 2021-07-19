@@ -2,7 +2,8 @@ import React from 'react';
 import { 
     BrowserRouter as Router,
     Switch,
-    Route
+    Route,
+    Link,
 } from "react-router-dom";
 
 import Home from "./Home.jsx";
@@ -24,27 +25,27 @@ function Header() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ml-md-auto">
                             <Nav.Item as="li">
-                                <Nav.Link href="/" id='navbar-home-li' className="hvr-grow">
+                                <Nav.Link href="/" id='navbar-home-li' className="hvr-grow links">
                                     Home
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="li">
-                            <Nav.Link href="/Games" id='navbar-games-li' className="hvr-grow">
-                                    Games
+                                <Nav.Link id='navbar-games-li' className="hvr-grow">
+                                    <Link to="/games" className="links"> Games </Link>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="li">
-                                <Nav.Link href="/Blog" id='navbar-connect-li' className="hvr-grow">
-                                    Blog
+                                <Nav.Link id='navbar-connect-li' className="hvr-grow">
+                                    <Link to="/blog" className="links"> Blog </Link>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="li">
-                                <Nav.Link href="/#about-me" id='navbar-about-me-li' className="hvr-grow">
+                                <Nav.Link href="/#about-me" id='navbar-about-me-li' className="hvr-grow links">
                                     About Me
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="li">
-                                <Nav.Link href="/#connect" id='navbar-connect-li' className="hvr-grow">
+                                <Nav.Link href="/#connect" id='navbar-connect-li' className="hvr-grow links">
                                     Connect
                                 </Nav.Link>
                             </Nav.Item>
@@ -54,8 +55,8 @@ function Header() {
             </header>
             <Switch>
                 <Route exact path="/"> <Home/> </Route>
-                <Route path="/Games"> <Games/> </Route>
-                <Route path="/Blog"> <AllPosts/> </Route>
+                <Route path="/games"> <Games/> </Route>
+                <Route path="/blog"> <AllPosts/> </Route>
                 <Route path="/:slug"> <OnePost/> </Route>
             </Switch>
         </Router>
