@@ -33,11 +33,11 @@ function Header() {
                                     Games
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="li">
+                            {/* <Nav.Item as="li">
                                 <Nav.Link href="/Blog" id='navbar-connect-li' className="hvr-grow">
                                     Blog
                                 </Nav.Link>
-                            </Nav.Item>
+                            </Nav.Item> */}
                             <Nav.Item as="li">
                                 <Nav.Link href="/#about-me" id='navbar-about-me-li' className="hvr-grow">
                                     About Me
