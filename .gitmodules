@@ -1,0 +1,3 @@
+[submodule "src/component/simplePong"]
+	path = src/component/simplePong
+	url = https://github.com/code-c/simplePong.git

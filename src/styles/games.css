@@ -1,0 +1,27 @@
+.game-header {
+    text-align: center;
+}
+
+.game-footer {
+    text-align: center;
+}
+.game-footer button {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.50);
+}
+
+.runner {
+    margin: auto;
+}
+
+/* PONG CSS */
+
+.pong {
+    text-align: center;
+}
+
+.pong button {
+    color: #7eb7cc;
+    border-color: #7eb7cc;
+    background-color: rgba(0, 0, 0, 0.5);
+}
