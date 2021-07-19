@@ -5,7 +5,6 @@
 #youre going to need the latest verion of node installed
 #first we install the node dependancies
 echo "Installing node modules"
-cd react-migration/
 yarn
 echo "done..."
 
