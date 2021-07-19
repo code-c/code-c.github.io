@@ -2,11 +2,11 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 
 // games
-import Pong from './simplePong/src/components/Pong';
+import Pong from './pong/components/Pong';
 // import Runner from './runner/Runner';
 
 // pong styling
-import './simplePong/src/style.css';
+import './pong/pong.css';
 import '../styles/games.css';
 
 export default class Games extends React.Component {
