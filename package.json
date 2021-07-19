@@ -1,0 +1,60 @@
+{
+  "homepage": "https://code-c.github.io",
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@pixi/tilemap": "^3.2.1",
+    "@sanity/block-content-to-react": "^2.0.7",
+    "@sanity/client": "^2.7.1",
+    "@sanity/image-url": "^0.140.22",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "bootstrap": "^4.6.0",
+    "emailjs-com": "^2.6.4",
+    "gh-pages": "^3.2.0",
+    "jquery": "^3.6.0",
+    "node-sass": "^5.0.0",
+    "pixi.js": "^6.0.4",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.5.2",
+    "react-dom": "^17.0.1",
+    "react-id-swiper": "^4.0.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "swiper": "^6.7.0",
+    "swup": "^2.0.14",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "moment": "^2.29.1",
+    "react-markdown": "^5.0.3"
+  }
+}

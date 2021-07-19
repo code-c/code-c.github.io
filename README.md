@@ -1,21 +1,14 @@
 Read Me
 Author: Codie Cottrell
 
-Some notes:
+This is my creation!
 
-- There are no working links as of now off of the projects page
+-A completely static webpage built on the React framework!
 
-- Feel free to use this as a template. It uses basic boostrap and is pretty easy to look through
+-Using libraries like Sanity.js, PIXI.js and Email.js to construct a fully functional webpage.
 
-- The code base for this site was modeled from a friends project named: SphyperMedia
-github: https://github.com/thehellahub/SphyperMedia
+-Complete with a form for contacting me, and a couple games! 
 
-- If you wish to visit the webpage go to deployments on the github repo or visit:
-  https://code-c.github.io/
+-I even wrote a blog!
 
---------------------------------------------------------------------------------
-
-There is nothing special going on yet. My plans include looking into:
- - Creating an interactive demo for the game fernQuest
- - An AI chat bot maybe... it may not work on a static webpage
- - I may convert this to a React front end in another repo
+I hope you check it out and enjoy: code-c.github.io
