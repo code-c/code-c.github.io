@@ -16,7 +16,7 @@ import Nav from "react-bootstrap/Nav";
 
 function Header() {
     return(
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <header>
                 <Navbar collapseOnSelect expand="md" fixed="top" className="navbar-dark">
                     <Navbar.Brand className="hvr-grow" href="/">Codie Cottrell</Navbar.Brand>
