@@ -2,6 +2,25 @@ import React from "react";
 import SwiperCore, {Navigation, Pagination, EffectCoverflow, Mousewheel} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
+// images
+import personalPhoto from "../staticImages/codie.jpg";
+import github from "../staticImages/github.webp";
+import stackOverflow from "../staticImages/stackoverflow.webp";
+import python from "../staticImages/python.png";
+import cpp from "../staticImages/cpp.png";
+import java from "../staticImages/java.png";
+import js from "../staticImages/js.png";
+import wasm from "../staticImages/wasm.png";
+import html from "../staticImages/html.png";
+import css from "../staticImages/css.png";
+import react from "../staticImages/react.png";
+import rpi from "../staticImages/rpi.png";
+import linux from "../staticImages/linux.png";
+import barHarbor from "../staticImages/barHarbor.jpg";
+import mushroom2 from "../staticImages/mushroom2.jpg";
+import mushroom from "../staticImages/mushroom.jpg";
+import clearBlue from "../staticImages/clearBlue.jpg";
+import reflect from "../staticImages/reflect.jpg";
 
 // styles 
 import 'swiper/swiper.scss';
@@ -28,7 +47,7 @@ function AboutMe() {
 
 			{/* subtitle "three passions: etc" */}
 			<div className="col-12">
-				<img className="personal-photo" src="static/codie.jpg" alt="Avatar"></img>
+				<img className="personal-photo" src={personalPhoto} alt="Avatar"></img>
 			</div>
 
 			<div className="col-12">
@@ -44,10 +63,10 @@ function AboutMe() {
       	        </div>
 				<div className="profiles">
 					<a href="https://github.com/code-c" target="blank">
-                        <img className="hvr-grow" src="static/github.webp" alt="github"></img>
+                        <img className="hvr-grow" src={github} alt="github"></img>
 					</a>
 					<a href="https://stackoverflow.com/users/14694356/codie-cottrell?tab=profile" target="blank">
-						<img className="hvr-grow" src="static/stackoverflow.webp" alt="stackOverflow"></img>
+						<img className="hvr-grow" src={stackOverflow} alt="stackOverflow"></img>
 					</a>
 				</div>
 			</div>
@@ -78,43 +97,43 @@ function AboutMe() {
 				>	
 					{/* passion photo/something reel */}
 					<SwiperSlide id='slide1'>
-						<img className="logo-slide" src="static/python.png" alt="first slide"></img>
+						<img className="logo-slide" src={python} alt="first slide"></img>
 					</SwiperSlide>
 
 					<SwiperSlide id='slide2'>
-						<img className="logo-slide"  src="static/cpp.png" alt="second slide"></img>
+						<img className="logo-slide"  src={cpp} alt="second slide"></img>
 					</SwiperSlide>
 
 					<SwiperSlide id='slide3'>
-						<img className="logo-slide"  src="static/java.png" alt="second slide"></img>
+						<img className="logo-slide"  src={java} alt="third slide"></img>
 					</SwiperSlide>
 
 					<SwiperSlide id='slide4'>
-						<img className="logo-slide"  src="static/js.png" alt="second slide"></img>
+						<img className="logo-slide"  src={js} alt="fourth slide"></img>
 					</SwiperSlide>
 
 					<SwiperSlide id='slide4'>
-						<img className="logo-slide"  src="static/wasm.png" alt="second slide"></img>
+						<img className="logo-slide"  src={wasm} alt="fifth slide"></img>
 					</SwiperSlide>
 
 					<SwiperSlide id='slide5'>
-						<img className="logo-slide"  src="static/html.png" alt="second slide"></img>
+						<img className="logo-slide"  src={html} alt="sixth slide"></img>
 					</SwiperSlide>
 
 					<SwiperSlide id='slide6'>
-						<img className="logo-slide"  src="static/css.png" alt="second slide"></img>
+						<img className="logo-slide"  src={css} alt="seventh slide"></img>
 					</SwiperSlide>
 
 					<SwiperSlide id='slide7'>
-						<img className="logo-slide"  src="static/react.png" alt="second slide"></img>
+						<img className="logo-slide"  src={react} alt="eigth slide"></img>
 					</SwiperSlide>
 
 					<SwiperSlide id='slide8'>
-						<img className="logo-slide"  src="static/rpi.png" alt="second slide"></img>
+						<img className="logo-slide"  src={rpi} alt="ninth slide"></img>
 					</SwiperSlide>
 
 					<SwiperSlide id='slide9'>
-						<img className="logo-slide"  src="static/linux.png" alt="second slide"></img>
+						<img className="logo-slide"  src={linux} alt="tenth slide"></img>
 					</SwiperSlide>
 
 				</Swiper>
@@ -159,26 +178,24 @@ function AboutMe() {
 				>	
 					{/* passion photo/something reel */}
 					<SwiperSlide id='slide1'>
-						<img className="image-slide" src="static/barHarbor.jpg" alt="first slide"></img>
+						<img className="image-slide" src={barHarbor} alt="first slide"></img>
 					</SwiperSlide>
 
 					<SwiperSlide id='slide2'>
-						<img className="image-slide"  src="static/mushroom2.jpg" alt="second slide"></img>
+						<img className="image-slide"  src={mushroom2} alt="second slide"></img>
 					</SwiperSlide>
 
 					<SwiperSlide id='slide2' >
-						<img className="image-slide"  src="static/mushroom.jpg" alt="second slide"></img>
+						<img className="image-slide"  src={mushroom} alt="second slide"></img>
 					</SwiperSlide>
 
 					<SwiperSlide id='slide2' >
-						<img className="image-slide"  src="static/clearBlue.jpg" alt="second slide"></img>
+						<img className="image-slide"  src={clearBlue} alt="second slide"></img>
 					</SwiperSlide>
 
 					<SwiperSlide id='slide2' >
-						<img className="image-slide"  src="static/reflect.jpg" alt="second slide"></img>
+						<img className="image-slide"  src={reflect} alt="second slide"></img>
 					</SwiperSlide>
-
-
 				</Swiper>
 
 			</div>
