@@ -185,16 +185,16 @@ function AboutMe() {
 						<img className="image-slide"  src={mushroom2} alt="second slide"></img>
 					</SwiperSlide>
 
-					<SwiperSlide id='slide2' >
-						<img className="image-slide"  src={mushroom} alt="second slide"></img>
+					<SwiperSlide id='slide3' >
+						<img className="image-slide"  src={mushroom} alt="third slide"></img>
 					</SwiperSlide>
 
-					<SwiperSlide id='slide2' >
-						<img className="image-slide"  src={clearBlue} alt="second slide"></img>
+					<SwiperSlide id='slide4' >
+						<img className="image-slide"  src={clearBlue} alt="fourth slide"></img>
 					</SwiperSlide>
 
-					<SwiperSlide id='slide2' >
-						<img className="image-slide"  src={reflect} alt="second slide"></img>
+					<SwiperSlide id='slide5' >
+						<img className="image-slide"  src={reflect} alt="fifth slide"></img>
 					</SwiperSlide>
 				</Swiper>
 
