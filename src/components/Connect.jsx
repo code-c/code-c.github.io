@@ -6,7 +6,8 @@ import Toast from 'react-bootstrap/Toast';
 // import { calendarFormat } from "moment";
 import "./../styles/connect.css";
 
-
+// image imports 
+import linkedIn from "../staticImages/linkedin.webp";
 
 
 function Connect() {
@@ -139,7 +140,7 @@ function Connect() {
                     </p>
                     <div className='profiles'>
                         <a href="https://www.linkedin.com/in/codie-cottrell/" target="blank">
-                        <img className="hvr-grow" src="static/linkedin.webp" alt="linkedIn"></img>
+                        <img className="hvr-grow" src={linkedIn} alt="linkedIn"></img>
                         </a>
                     </div>
                 </div>

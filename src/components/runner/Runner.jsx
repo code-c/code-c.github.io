@@ -53,7 +53,7 @@ export default class Render extends React.Component {
         
         
         // add resources to the loader to use later
-        loader.add('tilemap', tiles);
+        loader.add('./src/components/runner/images/StaticTiles.json');
 
         console.log(loader.resources);
 
