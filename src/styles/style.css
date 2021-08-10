@@ -11,7 +11,7 @@ html, body {
   font-family: 'Playfair', sans-serif;
   font-family: 'Raleway', sans-serif;
   color: #bdc3c7;
-  background-color: #323133;
+  background-color: #111111;
   }
 
 .headings {
@@ -19,17 +19,13 @@ html, body {
 }
 
 .App {
-  background-image: linear-gradient(to bottom right, 
-    #434343,
-    #3B3B3B,
-    #323232,
-    #2A2A2A,
-    #222222,
+  background-image: linear-gradient(to bottom left,
     #191919,
     #111111,
     #080808,
     #000000
-    )
+    );
+
 }
 
 
