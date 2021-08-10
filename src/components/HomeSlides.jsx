@@ -4,6 +4,8 @@ import 'swiper/swiper.scss';
 import SwiperCore, {Parallax, Autoplay} from 'swiper';
 import Swiper from 'react-id-swiper';
 
+import Titanium from './showcase/components/Titanium';
+
 // images to use 
 import imageOne from '../staticImages/main.png';
 import imageTwo from "../staticImages/wave.png" ;
@@ -41,11 +43,13 @@ const HomeSlides = () => {
     <Swiper id='homeSlides' {...HomeSliderConfigs} getSwiper={setParallaxSwiper}>
       <div className="home-slide">
         <div
+          id = "Titanium"
           className="slide-image"
           data-swiper-parallax={parallaxAmount}
           data-swiper-parallax-opacity={parallaxOpacity}
         >
-          <img src={imageOne} alt="image1"></img>
+          <Titanium/>
+          {/* <img src={imageOne} alt="image1"></img> */}
         </div>
         <div className="col-md-6 offset-md-3 my-auto text-center text-white">
           <h1 className="text-uppercase mb-2 font-weight-bold">Welcome To My Page</h1>
